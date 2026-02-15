@@ -19,6 +19,14 @@ class HomeController extends Controller
         $partners = Partner::active()->orderBy('order')->orderBy('created_at', 'desc')->get();
         $testimonials = Testimonial::active()->orderBy('order')->orderBy('created_at')->get();
 
-        return view('website.pages.home', compact('services', 'projects', 'homeBlogs', 'partners', 'testimonials'));
+        $contentStats = [
+            'services' => Service::active()->count(),
+            'projects' => Project::active()->count(),
+            'blogs' => Blog::active()->count(),
+            'partners' => Partner::active()->count(),
+            'testimonials' => Testimonial::active()->count(),
+        ];
+
+        return view('website.pages.home', compact('services', 'projects', 'homeBlogs', 'partners', 'testimonials', 'contentStats'));
     }
 }

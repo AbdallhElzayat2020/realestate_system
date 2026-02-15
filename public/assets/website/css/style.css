@@ -4325,6 +4325,67 @@ a.service-detail-contact-value:hover {
     }
 }
 
+/* ========== محتوانا في أرقام – إحصائيات المحتوى الفعلية ========== */
+.content-stats-section {
+    background-color: var(--section-bg);
+}
+
+.content-stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 1.5rem 1rem;
+    border-radius: 16px;
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    box-shadow: 0 4px 16px rgba(15, 23, 42, 0.06);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    color: inherit;
+}
+
+a.content-stat-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 28px rgba(104, 66, 80, 0.12);
+    color: inherit;
+    border-color: rgba(246, 175, 71, 0.25);
+}
+
+.content-stat-item--static {
+    cursor: default;
+}
+
+.content-stat-icon {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(246, 175, 71, 0.12);
+    color: var(--brand-primary);
+    border-radius: 12px;
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+}
+
+.content-stat-number {
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: var(--brand-secondary);
+    line-height: 1.2;
+}
+
+.content-stat-label {
+    font-size: 0.9rem;
+    color: #64748b;
+    margin-top: 0.25rem;
+}
+
+[dir="rtl"] .content-stat-item {
+    text-align: center;
+}
+
 /* ========== قسم المشاريع – خلفية فاتحة وشكل مرتب ========== */
 .home-projects-section {
     background-color: var(--section-bg);

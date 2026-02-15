@@ -3,16 +3,19 @@
 namespace App\Http\Controllers\Dashboard;
 
 use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
+use App\Models\Blog;
+use App\Models\Contact;
+use App\Models\JobApplication;
+use App\Models\Partner;
+use App\Models\Project;
+use App\Models\Quote;
+use App\Models\Service;
+use App\Models\Testimonial;
 use Illuminate\Routing\Controllers\HasMiddleware;
 use Illuminate\Routing\Controllers\Middleware;
-use Illuminate\Support\Facades\DB;
 
-class DashboardController  implements HasMiddleware
+class DashboardController implements HasMiddleware
 {
-    /**
-     * Create a new controller instance.
-     */
     public static function middleware(): array
     {
         return [
@@ -21,45 +24,34 @@ class DashboardController  implements HasMiddleware
     }
 
     /**
-     * Show the dashboard home page.
+     * Show the dashboard home page with statistics.
      */
     public function index()
     {
-        // Get analytics data
         $stats = [
-            'total_users' => DB::table('users')->count(),
-            'total_contacts' => DB::table('contacts')->count() ?? 0,
-            'total_quotes' => DB::table('quotes')->count() ?? 0,
-            'total_jobs' => DB::table('job_applications')->count() ?? 0,
+            'services' => Service::count(),
+            'projects' => Project::count(),
+            'blogs' => Blog::count(),
+            'partners' => Partner::count(),
+            'testimonials' => Testimonial::count(),
+            'contacts' => Contact::count(),
+            'quotes' => Quote::count(),
+            'job_applications' => JobApplication::count(),
         ];
 
-        // Get recent activities (if you have activity logs)
-        $recent_activities = [];
-
-        // Get recent quotes (if you have quotes table)
-        $recent_quotes = [];
-
-        // Get chart data for the last 7 days
         $chart_data = $this->getChartData();
 
-        return view('dashboard.pages.home', compact('stats', 'recent_activities', 'recent_quotes', 'chart_data'));
+        return view('dashboard.pages.home', compact('stats', 'chart_data'));
     }
 
-    /**
-     * Get chart data for analytics
-     */
-    private function getChartData()
+    private function getChartData(): array
     {
         $days = [];
         $values = [];
-
         for ($i = 6; $i >= 0; $i--) {
-            $date = now()->subDays($i)->format('Y-m-d');
             $days[] = now()->subDays($i)->format('M d');
-            // You can customize this to get actual data from your tables
-            $values[] = rand(10, 100);
+            $values[] = Contact::whereDate('created_at', now()->subDays($i))->count();
         }
-
         return [
             'labels' => $days,
             'data' => $values,
