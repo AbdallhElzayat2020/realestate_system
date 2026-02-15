@@ -42,7 +42,7 @@
                         <li><a href="{{ route('about') }}">{{ __('footer.about') }}</a></li>
                         <li><a href="{{ route('about') }}#vision-mission">{{ __('footer.vision_mission') }}</a></li>
                         <li><a href="{{ route('services') }}">{{ __('footer.services') }}</a></li>
-                        <li><a href="{{ route('projects') }}">{{ __('footer.projects') }}</a></li>}</a></li>
+                        <li><a href="{{ route('projects') }}">{{ __('footer.projects') }}</a></li>
                     </ul>
                 </div>
 
