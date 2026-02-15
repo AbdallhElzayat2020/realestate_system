@@ -21,14 +21,14 @@
     <section id="about" class="home-section about-section py-5">
         <div class="container">
             <div class="row align-items-center g-4">
-                <div class="col-md-6 order-md-1 order-2">
+                <div class="col-md-6 order-md-1 order-2" data-aos="fade-up" data-aos-duration="600">
                     <h2 class="section-title mb-4">{{ __('home.about_title') }}</h2>
                     <p class="text-intro mt-2">{{ __('home.about_description_1') }}</p>
                     <p class="text-intro mt-2">{{ __('home.about_description_2') }}</p>
                     <p class="text-intro mt-2">{{ __('home.about_description_3') }}</p>
                     <a href="{{ route('about') }}" class="btn btn-primary btn-about-cta mt-3 px-4 py-3 rounded-3">{{ __('home.about_discover_products') }}</a>
                 </div>
-                <div class="col-md-6 order-md-2 order-1 mb-4 mb-md-0">
+                <div class="col-md-6 order-md-2 order-1 mb-4 mb-md-0" data-aos="fade-up" data-aos-duration="600" data-aos-delay="150">
                     <div class="about-section-image-wrap rounded-3 overflow-hidden shadow-sm">
                         <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80" class="img-fluid" alt="{{ __('home.about_title') }}" loading="lazy" />
                     </div>
@@ -43,14 +43,14 @@
     @endphp
     <section id="services" class="py-5 light_background home-services-section">
         <div class="container">
-            <header class="section-header">
+            <header class="section-header" data-aos="fade-up" data-aos-duration="500">
                 <h2 class="section-header__title">{{ __('home.services_title') }}</h2>
                 <div class="section-header__line"></div>
             </header>
             <div class="row g-4">
                 @foreach($services as $index => $service)
                     @php $icon = $serviceIcons[$index % count($serviceIcons)]; @endphp
-                    <div class="col-md-6 col-lg-4">
+                    <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-duration="500" data-aos-delay="{{ min($index * 80, 240) }}">
                         <a href="{{ route('services.show', $service->slug) }}" class="service-card-modern-link text-decoration-none d-block h-100">
                             <div class="service-card-modern h-100">
                                 <div class="service-card-modern-media">
@@ -91,30 +91,30 @@
     @endphp
     <section id="stats" class="stats-section">
         <div class="container">
-            <header class="section-header section-header--light">
+            <header class="section-header section-header--light" data-aos="fade-up" data-aos-duration="500">
                 <h2 class="section-header__title">{{ __('home.stats_title') }}</h2>
                 <div class="section-header__line"></div>
             </header>
             <div class="row g-4 justify-content-center stats-row">
-                <div class="col-6 col-md-3">
+                <div class="col-6 col-md-3" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">
                     <div class="stat-card">
                         <div class="stat-number stats-counter" data-count="{{ $statParsed[0]['count'] }}" data-suffix="{{ $statParsed[0]['suffix'] }}" data-duration="2000">0{{ $statParsed[0]['suffix'] }}</div>
                         <p class="stat-label">{{ __('home.stat_1_label') }}</p>
                     </div>
                 </div>
-                <div class="col-6 col-md-3">
+                <div class="col-6 col-md-3" data-aos="fade-up" data-aos-duration="500" data-aos-delay="150">
                     <div class="stat-card">
                         <div class="stat-number stats-counter" data-count="{{ $statParsed[1]['count'] }}" data-suffix="{{ $statParsed[1]['suffix'] }}" data-duration="2000">0{{ $statParsed[1]['suffix'] }}</div>
                         <p class="stat-label">{{ __('home.stat_2_label') }}</p>
                     </div>
                 </div>
-                <div class="col-6 col-md-3">
+                <div class="col-6 col-md-3" data-aos="fade-up" data-aos-duration="500" data-aos-delay="200">
                     <div class="stat-card">
                         <div class="stat-number stats-counter" data-count="{{ $statParsed[2]['count'] }}" data-suffix="{{ $statParsed[2]['suffix'] }}" data-duration="2000">0{{ $statParsed[2]['suffix'] }}</div>
                         <p class="stat-label">{{ __('home.stat_3_label') }}</p>
                     </div>
                 </div>
-                <div class="col-6 col-md-3">
+                <div class="col-6 col-md-3" data-aos="fade-up" data-aos-duration="500" data-aos-delay="250">
                     <div class="stat-card">
                         <div class="stat-number stats-counter" data-count="{{ $statParsed[3]['count'] }}" data-suffix="{{ $statParsed[3]['suffix'] }}" data-duration="2000">0{{ $statParsed[3]['suffix'] }}</div>
                         <p class="stat-label">{{ __('home.stat_4_label') }}</p>
@@ -128,13 +128,13 @@
     <!-- 5. مشاريعنا -->
     <section id="projects" class="home-projects-section py-5">
         <div class="container">
-            <header class="section-header">
+            <header class="section-header" data-aos="fade-up" data-aos-duration="500">
                 <h2 class="section-header__title">{{ __('home.projects_title') }}</h2>
                 <div class="section-header__line"></div>
             </header>
             <div class="row g-4">
-                @foreach($projects as $project)
-                    <div class="col-md-6 col-lg-4">
+                @foreach($projects as $index => $project)
+                    <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-duration="500" data-aos-delay="{{ min($index * 80, 240) }}">
                         <a href="{{ route('projects.show', $project->slug) }}" class="project-card-link text-decoration-none d-block h-100">
                             <div class="project-card card border-0 overflow-hidden h-100">
                                 <div class="project-card-image">
@@ -172,13 +172,13 @@
     <!-- 6. شركاء النجاح -->
     <section id="partners" class="py-5 light_background">
         <div class="container">
-            <header class="section-header">
+            <header class="section-header" data-aos="fade-up" data-aos-duration="500">
                 <h2 class="section-header__title">{{ __('home.partners_title') }}</h2>
                 <p class="section-header__subtitle">{{ __('home.partners_subtitle') }}</p>
                 <div class="section-header__line"></div>
             </header>
             <div class="row justify-content-center">
-                    <div class="col-12">
+                    <div class="col-12" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">
                         <div class="d-flex flex-wrap justify-content-center align-items-center gap-4 py-4">
                             @foreach($partners as $partner)
                                 <div class="partners-card rounded-3 p-4 bg-white shadow-sm border-0 text-center">
@@ -211,13 +211,13 @@
     <!-- 7. لماذا تختارنا -->
     <section id="why-us" class="why-choose-section py-5">
         <div class="container">
-            <header class="section-header">
+            <header class="section-header" data-aos="fade-up" data-aos-duration="500">
                 <h2 class="section-header__title">{{ __('home.why_choose_us_title') }}</h2>
                 <p class="section-header__subtitle">{{ __('home.why_choose_us_subtitle') }}</p>
                 <div class="section-header__line"></div>
             </header>
             <div class="row g-4">
-                <div class="col-md-6 col-lg-4">
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-duration="500" data-aos-delay="80">
                     <article class="why-choose-card h-100">
                         <div class="why-choose-card__icon">
                             <i class="fas fa-award"></i>
@@ -226,7 +226,7 @@
                         <p class="why-choose-card__desc">{{ __('home.why_1_desc') }}</p>
                     </article>
                 </div>
-                <div class="col-md-6 col-lg-4">
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-duration="500" data-aos-delay="160">
                     <article class="why-choose-card h-100">
                         <div class="why-choose-card__icon">
                             <i class="fas fa-landmark"></i>
@@ -235,7 +235,7 @@
                         <p class="why-choose-card__desc">{{ __('home.why_2_desc') }}</p>
                     </article>
                 </div>
-                <div class="col-md-6 col-lg-4">
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-duration="500" data-aos-delay="240">
                     <article class="why-choose-card why-choose-card--last h-100">
                         <div class="why-choose-card__icon">
                             <i class="fas fa-handshake"></i>
@@ -252,7 +252,7 @@
     <!-- 8. آراء العملاء - سلايدر Swiper -->
     <section id="testimonials" class="testimonials-section py-5 light_background">
         <div class="container">
-            <header class="section-header">
+            <header class="section-header" data-aos="fade-up" data-aos-duration="500">
                 <h2 class="section-header__title">{{ __('home.testimonials_title') }}</h2>
                 <p class="section-header__subtitle">{{ __('home.testimonials_subtitle') }}</p>
                 <div class="section-header__line"></div>
@@ -301,13 +301,13 @@
     <!-- المدونات – آخر قسم في الصفحة الرئيسية -->
     <section id="home-blogs" class="home-section home-blogs-section py-5">
         <div class="container">
-            <header class="section-header">
+            <header class="section-header" data-aos="fade-up" data-aos-duration="500">
                 <h2 class="section-header__title">{{ __('home.blogs_section_title') }}</h2>
                 <div class="section-header__line"></div>
             </header>
             <div class="row g-4">
-                    @foreach ($homeBlogs as $blog)
-                        <div class="col-md-6 col-lg-4">
+                    @foreach ($homeBlogs as $index => $blog)
+                        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-duration="500" data-aos-delay="{{ min($index * 80, 240) }}">
                             <a href="{{ route('blogs.show', $blog->slug) }}" class="product-card-link text-decoration-none d-block h-100">
                                 <div class="card shadow-sm border-0 overflow-hidden product-card h-100">
                                     <div class="product-card-image">

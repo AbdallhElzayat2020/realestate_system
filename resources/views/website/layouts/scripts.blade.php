@@ -248,9 +248,10 @@
         if (nextBtn) nextBtn.style.display = 'flex';
     }
     AOS.init({
-        duration: 800,
+        duration: 700,
         easing: "ease-out-cubic",
         once: true,
+        offset: 40,
     });
 
     // عند تغيير اللغة: البقاء في نفس الصفحة + نفس القسم (hash) إن وُجد
