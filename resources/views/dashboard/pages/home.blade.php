@@ -105,34 +105,6 @@
                 </div>
             </a>
         </div>
-        <div class="col-xl-4 col-md-6 col-12 mb-4">
-            <a href="{{ route('dashboard.quotes.index') }}" class="card border-0 shadow-sm h-100 text-decoration-none stats-card stats-card--warning">
-                <div class="card-body d-flex align-items-center">
-                    <div class="avatar flex-shrink-0 bg-label-warning rounded-3 p-3 me-3">
-                        <i class="ti ti-file-invoice ti-lg text-warning"></i>
-                    </div>
-                    <div class="flex-grow-1">
-                        <span class="d-block fw-semibold text-body">Quote Requests</span>
-                        <h4 class="mb-0 mt-1">{{ $stats['quotes'] }}</h4>
-                    </div>
-                    <i class="ti ti-chevron-right text-muted ti-sm"></i>
-                </div>
-            </a>
-        </div>
-        <div class="col-xl-4 col-md-6 col-12 mb-4">
-            <a href="{{ route('dashboard.job-applications.index') }}" class="card border-0 shadow-sm h-100 text-decoration-none stats-card stats-card--success">
-                <div class="card-body d-flex align-items-center">
-                    <div class="avatar flex-shrink-0 bg-label-success rounded-3 p-3 me-3">
-                        <i class="ti ti-briefcase ti-lg text-success"></i>
-                    </div>
-                    <div class="flex-grow-1">
-                        <span class="d-block fw-semibold text-body">Job Applications</span>
-                        <h4 class="mb-0 mt-1">{{ $stats['job_applications'] }}</h4>
-                    </div>
-                    <i class="ti ti-chevron-right text-muted ti-sm"></i>
-                </div>
-            </a>
-        </div>
     </div>
 
     <!-- Chart: Contact messages (last 7 days) -->
