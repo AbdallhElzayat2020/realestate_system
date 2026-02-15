@@ -26,7 +26,7 @@
                 <input type="text" id="name_ar" name="name[ar]" dir="rtl"
                     class="form-control @error('name.ar') is-invalid @enderror"
                     value="{{ old('name.ar', isset($category) ? $category->getTranslation('name', 'ar') : '') }}"
-                    placeholder="اسم التصنيف بالعربية" />
+                    placeholder="Category name (Arabic)" />
                 @error('name.ar')
                     <div class="invalid-feedback">{{ $message }}</div>
                 @enderror

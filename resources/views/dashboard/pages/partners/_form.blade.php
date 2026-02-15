@@ -11,7 +11,7 @@
         @enderror
     </div>
     <div class="col-md-6">
-        <label class="form-label" for="order">Order / ترتيب العرض</label>
+        <label class="form-label" for="order">Display Order</label>
         <input type="number" id="order" name="order" class="form-control @error('order') is-invalid @enderror"
             value="{{ old('order', $partner->order ?? 0) }}" min="0" placeholder="0">
         <small class="text-muted">الأصغر يظهر أولاً</small>
@@ -36,13 +36,13 @@
                 <img src="{{ asset($partner->logo) }}" alt="" class="img-fluid rounded border" style="max-height: 80px; object-fit: contain;">
             </div>
         @endif
-        <small class="text-muted d-block mt-1">صورة الشعار (اختياري عند التعديل)</small>
+        <small class="text-muted d-block mt-1">Logo image (optional when editing)</small>
         @error('logo')
             <div class="invalid-feedback d-block">{{ $message }}</div>
         @enderror
     </div>
     <div class="col-12">
-        <label class="form-label" for="link">Link / رابط الموقع (اختياري)</label>
+        <label class="form-label" for="link">Link (optional)</label>
         <input type="url" id="link" name="link" class="form-control @error('link') is-invalid @enderror"
             value="{{ old('link', $partner->link ?? '') }}" placeholder="https://...">
         @error('link')

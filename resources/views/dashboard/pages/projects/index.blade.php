@@ -6,7 +6,7 @@
         <div class="col-12">
             <div class="card">
                 <div class="card-header d-flex justify-content-between align-items-center">
-                    <h5 class="card-title mb-0">Projects / المشاريع</h5>
+                    <h5 class="card-title mb-0">Projects</h5>
                     <a href="{{ route('dashboard.projects.create') }}" class="btn btn-primary">
                         <i class="ti ti-plus me-1"></i>
                         Add Project

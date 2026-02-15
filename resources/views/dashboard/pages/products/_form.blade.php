@@ -26,7 +26,7 @@
                 <input type="text" id="name_ar" name="name[ar]" dir="rtl"
                     class="form-control @error('name.ar') is-invalid @enderror"
                     value="{{ old('name.ar', isset($product) ? $product->getTranslation('name', 'ar') : '') }}"
-                    placeholder="اسم المنتج بالعربية" />
+                    placeholder="Product name (Arabic)" />
                 @error('name.ar')
                     <div class="invalid-feedback">{{ $message }}</div>
                 @enderror
@@ -48,7 +48,7 @@
         <label class="form-label" for="description_ar">Description (Arabic)</label>
         <textarea id="description_ar" name="description[ar]" rows="6" dir="rtl"
             class="form-control @error('description.ar') is-invalid @enderror"
-            placeholder="وصف المنتج بالعربية...">{{ old('description.ar', isset($product) ? $product->getTranslation('description', 'ar') : '') }}</textarea>
+            placeholder="Product description (Arabic)...">{{ old('description.ar', isset($product) ? $product->getTranslation('description', 'ar') : '') }}</textarea>
         @error('description.ar')
             <div class="invalid-feedback">{{ $message }}</div>
         @enderror
@@ -137,7 +137,7 @@ $(document).ready(function() {
         callbacks: { onInit: function() { $('.note-dropdown-menu').css('z-index', 99999); } }
     };
     $('#description_en').summernote($.extend({}, summernoteCommon, { placeholder: 'Product description in English...' }));
-    $('#description_ar').summernote($.extend({}, summernoteCommon, { lang: 'ar-AR', placeholder: 'وصف المنتج بالعربية...' }));
+    $('#description_ar').summernote($.extend({}, summernoteCommon, { lang: 'ar-AR', placeholder: 'Product description (Arabic)...' }));
 });
 </script>
 @endpush

@@ -26,7 +26,7 @@
                 <input type="text" id="name_ar" name="name[ar]" dir="rtl"
                     class="form-control @error('name.ar') is-invalid @enderror"
                     value="{{ old('name.ar', isset($service) ? $service->getTranslation('name', 'ar') : '') }}"
-                    placeholder="اسم الخدمة بالعربية" />
+                    placeholder="Service name (Arabic)" />
                 @error('name.ar')
                     <div class="invalid-feedback">{{ $message }}</div>
                 @enderror
@@ -55,7 +55,7 @@
         <label class="form-label" for="description_ar">Description (Arabic)</label>
         <textarea id="description_ar" name="description[ar]" rows="6" dir="rtl"
             class="form-control @error('description.ar') is-invalid @enderror"
-            placeholder="وصف الخدمة بالعربية...">{{ old('description.ar', isset($service) ? $service->getTranslation('description', 'ar') : '') }}</textarea>
+            placeholder="Service description (Arabic)...">{{ old('description.ar', isset($service) ? $service->getTranslation('description', 'ar') : '') }}</textarea>
         @error('description.ar')
             <div class="invalid-feedback">{{ $message }}</div>
         @enderror
@@ -63,7 +63,7 @@
     <div class="col-12">
         <div class="row g-3 align-items-start">
             <div class="col-md-6">
-                <label class="form-label" for="thumbnail">Thumbnail / الصورة المصغرة</label>
+                <label class="form-label" for="thumbnail">Thumbnail</label>
                 <input type="file" id="thumbnail" name="thumbnail" class="form-control @error('thumbnail') is-invalid @enderror" accept="image/*" />
                 @error('thumbnail')
                     <div class="invalid-feedback">{{ $message }}</div>
@@ -77,7 +77,7 @@
                 @endisset
             </div>
             <div class="col-md-6">
-                <label class="form-label" for="banner">Banner / صورة البانر</label>
+                <label class="form-label" for="banner">Banner</label>
                 <input type="file" id="banner" name="banner" class="form-control @error('banner') is-invalid @enderror" accept="image/*" />
                 @error('banner')
                     <div class="invalid-feedback">{{ $message }}</div>
@@ -146,7 +146,7 @@ $(document).ready(function() {
         callbacks: { onInit: function() { $('.note-dropdown-menu').css('z-index', 99999); } }
     };
     $('#description_en').summernote($.extend({}, summernoteCommon, { placeholder: 'Service description in English...' }));
-    $('#description_ar').summernote($.extend({}, summernoteCommon, { lang: 'ar-AR', placeholder: 'وصف الخدمة بالعربية...' }));
+    $('#description_ar').summernote($.extend({}, summernoteCommon, { lang: 'ar-AR', placeholder: 'Service description (Arabic)...' }));
 });
 </script>
 @endpush

@@ -33,7 +33,7 @@
                 <input type="text" id="title_ar" name="title[ar]" dir="rtl"
                     class="form-control @error('title.ar') is-invalid @enderror"
                     value="{{ old('title.ar', isset($blog) ? $blog->getTranslation('title', 'ar') : '') }}"
-                    placeholder="عنوان المدونة بالعربية" />
+                    placeholder="Blog title (Arabic)" />
                 @error('title.ar')
                     <div class="invalid-feedback">{{ $message }}</div>
                 @enderror
@@ -62,7 +62,7 @@
         <label class="form-label" for="content_ar">Content (Arabic)</label>
         <textarea id="content_ar" name="content[ar]" rows="6" dir="rtl"
             class="form-control summernote-editor @error('content.ar') is-invalid @enderror"
-            placeholder="محتوى المدونة بالعربية...">{{ old('content.ar', isset($blog) ? $blog->getTranslation('content', 'ar') : '') }}</textarea>
+            placeholder="Blog content (Arabic)...">{{ old('content.ar', isset($blog) ? $blog->getTranslation('content', 'ar') : '') }}</textarea>
         @error('content.ar')
             <div class="invalid-feedback">{{ $message }}</div>
         @enderror
@@ -144,7 +144,7 @@ $(document).ready(function() {
         $('#content_en').summernote($.extend({}, summernoteCommon, { placeholder: 'Blog content in English...' }));
     }
     if ($('#content_ar').length) {
-        $('#content_ar').summernote($.extend({}, summernoteCommon, { lang: 'ar-AR', placeholder: 'محتوى المدونة بالعربية...' }));
+        $('#content_ar').summernote($.extend({}, summernoteCommon, { lang: 'ar-AR', placeholder: 'Blog content (Arabic)...' }));
     }
 });
 </script>

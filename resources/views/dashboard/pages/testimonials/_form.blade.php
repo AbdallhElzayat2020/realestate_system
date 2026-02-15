@@ -73,7 +73,7 @@
     <div class="col-12">
         <label class="form-label" for="content_ar">Content (Arabic)</label>
         <textarea id="content_ar" name="content[ar]" rows="4" dir="rtl" class="form-control @error('content.ar') is-invalid @enderror" required
-            placeholder="نص الرأي بالعربية...">{{ old('content.ar', $testimonial->getTranslation('content', 'ar') ?? '') }}</textarea>
+            placeholder="Testimonial content (Arabic)...">{{ old('content.ar', $testimonial->getTranslation('content', 'ar') ?? '') }}</textarea>
         @error('content.ar')
             <div class="invalid-feedback">{{ $message }}</div>
         @enderror

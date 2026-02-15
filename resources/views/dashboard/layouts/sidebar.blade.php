@@ -28,7 +28,7 @@
             </a>
         </li>
 
-        {{-- مخفي: Quotes / FAQs / Job Applications --}}
+        {{-- Hidden: Quotes / FAQs / Job Applications --}}
         {{--
         <li class="menu-item {{ request()->routeIs('dashboard.quotes.*') ? 'active' : '' }}">
             <a href="{{ route('dashboard.quotes.index') }}" class="menu-link">
@@ -95,7 +95,7 @@
         <li class="menu-item {{ request()->routeIs('dashboard.testimonials.*') ? 'active' : '' }}">
             <a href="{{ route('dashboard.testimonials.index') }}" class="menu-link">
                 <i class="menu-icon tf-icons ti ti-message-circle"></i>
-                <div data-i18n="Testimonials">Testimonials / آراء العملاء</div>
+                <div data-i18n="Testimonials">Testimonials</div>
             </a>
         </li>
 

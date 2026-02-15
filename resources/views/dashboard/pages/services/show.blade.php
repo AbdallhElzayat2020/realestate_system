@@ -6,7 +6,7 @@
         <div class="col-12">
             <div class="card mb-4">
                 <div class="card-header d-flex justify-content-between align-items-center">
-                    <h5 class="card-title mb-0">Service Details / تفاصيل الخدمة</h5>
+                    <h5 class="card-title mb-0">Service Details</h5>
                     <div class="d-flex gap-2">
                         <a href="{{ route('dashboard.services.edit', $service) }}" class="btn btn-warning">
                             <i class="ti ti-edit me-1"></i> Edit

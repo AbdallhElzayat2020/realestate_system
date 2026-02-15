@@ -50,7 +50,7 @@
     <div class="col-md-6">
         <label class="form-label" for="name_ar">Title (Arabic)</label>
         <input type="text" id="name_ar" name="name[ar]" dir="rtl" class="form-control @error('name.ar') is-invalid @enderror"
-            value="{{ old('name.ar', $project->getTranslation('name', 'ar') ?? '') }}" placeholder="عنوان المشروع بالعربية" />
+            value="{{ old('name.ar', $project->getTranslation('name', 'ar') ?? '') }}" placeholder="Project title (Arabic)" />
         @error('name.ar')
             <div class="invalid-feedback">{{ $message }}</div>
         @enderror
@@ -77,17 +77,17 @@
     <div class="col-12">
         <label class="form-label" for="description_ar">Description (Arabic)</label>
         <textarea id="description_ar" name="description[ar]" rows="5" dir="rtl" class="form-control @error('description.ar') is-invalid @enderror"
-            placeholder="وصف المشروع بالعربية...">{{ old('description.ar', $project->getTranslation('description', 'ar') ?? '') }}</textarea>
+            placeholder="Project description (Arabic)...">{{ old('description.ar', $project->getTranslation('description', 'ar') ?? '') }}</textarea>
         @error('description.ar')
             <div class="invalid-feedback">{{ $message }}</div>
         @enderror
     </div>
 
-    {{-- الخريطة --}}
+    {{-- Map --}}
     <div class="col-12">
-        <label class="form-label" for="map">Map / الخريطة</label>
+        <label class="form-label" for="map">Map</label>
         <textarea id="map" name="map" rows="3" class="form-control @error('map') is-invalid @enderror"
-            placeholder="https://maps.app.goo.gl/... أو iframe من Google Maps">{{ old('map', $project->map ?? '') }}</textarea>
+            placeholder="https://maps.app.goo.gl/... or Google Maps iframe">{{ old('map', $project->map ?? '') }}</textarea>
         <small class="text-muted d-block mt-1">رابط الخريطة (مثل maps.app.goo.gl) أو كود iframe للتضمين</small>
         @error('map')
             <div class="invalid-feedback d-block">{{ $message }}</div>
@@ -107,7 +107,7 @@
     </div>
 
     <div class="col-12">
-        <label class="form-label" for="images">معرض الصور / Gallery Images</label>
+        <label class="form-label" for="images">Gallery Images</label>
         <input type="file" id="images" name="images[]" class="form-control @error('images') is-invalid @enderror" accept="image/*" multiple />
         <small class="text-muted d-block mt-1">صور إضافية تظهر داخل صفحة تفاصيل المشروع. يمكن اختيار أكثر من صورة.</small>
         @error('images')<div class="invalid-feedback">{{ $message }}</div>@enderror
@@ -175,7 +175,7 @@ $(document).ready(function() {
         $('#description_en').summernote($.extend({}, summernoteCommon, { placeholder: 'Project description in English...' }));
     }
     if ($('#description_ar').length) {
-        $('#description_ar').summernote($.extend({}, summernoteCommon, { lang: 'ar-AR', placeholder: 'وصف المشروع بالعربية...' }));
+        $('#description_ar').summernote($.extend({}, summernoteCommon, { lang: 'ar-AR', placeholder: 'Project description (Arabic)...' }));
     }
 });
 </script>
