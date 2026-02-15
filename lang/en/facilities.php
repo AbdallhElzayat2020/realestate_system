@@ -1,0 +1,25 @@
+<?php
+
+return [
+    'title' => 'Operations',
+    'intro' => 'ALSSAD STEEL FOR INDUSTRY CO. operates an advanced industrial system in Riyadh, designed to deliver high-precision production processes aimed at manufacturing reinforcing steel that meets approved standards.',
+    'production_title' => 'Production Facilities',
+    'production_1' => 'Modern production lines with advanced technologies to control product dimensions and mechanical properties.',
+    'production_2' => 'Highly efficient operating systems ensuring consistent quality and optimal productivity.',
+    'production_3' => 'Use of high-quality raw materials sourced from approved suppliers.',
+    'labs_title' => 'Quality Laboratories',
+    'labs_1' => 'Advanced laboratories for chemical and mechanical testing.',
+    'labs_2' => 'Full testing capabilities to ensure compliance with SASO ASTM 615 standards.',
+    'labs_3' => 'Precision testing equipment for tensile strength, elongation, bending, and chemical analysis.',
+    'logistics_title' => 'Logistics Services',
+    'logistics_1' => 'Large storage yards ensure proper product preservation.',
+    'logistics_2' => 'Efficient transportation systems enabling fast and reliable delivery across all regions of the Kingdom.',
+    'customer_title' => 'Customer Service',
+    'customer_1' => 'Specialized teams providing technical consultations on reinforcing steel products.',
+    'customer_2' => 'Continuous technical support before and after sales to ensure customer satisfaction.',
+    'image_1_title' => 'Production Facilities',
+    'image_2_title' => 'Quality Laboratories',
+    'image_3_title' => 'Logistics Services',
+    'image_4_title' => 'Customer Service',
+    'modal_title' => 'Image',
+];

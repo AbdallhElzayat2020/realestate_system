@@ -1,0 +1,27 @@
+<?php
+
+return [
+    'logo_alt' => 'شعار الشركة',
+    'home' => 'الرئيسية',
+    'about' => 'من نحن',
+    'vision_mission' => 'الرؤية والرسالة',
+    'services' => 'الخدمات',
+    'service_details' => 'تفاصيل الخدمة',
+    'projects' => 'المشاريع',
+    'project_details' => 'تفاصيل المشروع',
+    'contact_us' => 'تواصل معنا',
+    'address_label' => 'العنوان',
+    'phone_label' => 'رقم الهاتف',
+    'email_label' => 'الايميل',
+    'address' => 'الرياض، المملكة العربية السعودية',
+    'phone' => config('site.phone', '+966 53 062 2030'),
+    'email' => 'contact@bazigha.com',
+    'copyright' => '© :year بازغة. جميع الحقوق محفوظة.',
+    'tagline' => 'بازغة – ننهض برؤية واضحة.',
+    'blogs' => 'المدونة',
+    'quick_links' => 'روابط سريعة',
+    'latest_services' => 'آخر الخدمات',
+    'latest_news' => 'آخر الأخبار',
+    'all_services' => 'كل الخدمات',
+    'all_blogs' => 'كل المدونة',
+];

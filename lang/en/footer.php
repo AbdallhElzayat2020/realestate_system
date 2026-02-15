@@ -1,0 +1,27 @@
+<?php
+
+return [
+    'logo_alt' => 'Company logo',
+    'home' => 'Home',
+    'about' => 'About',
+    'vision_mission' => 'Vision & Mission',
+    'services' => 'Services',
+    'service_details' => 'Service Details',
+    'projects' => 'Projects',
+    'project_details' => 'Project Details',
+    'contact_us' => 'Contact Us',
+    'address_label' => 'Address',
+    'phone_label' => 'Phone',
+    'email_label' => 'Email',
+    'address' => 'Riyadh, Kingdom of Saudi Arabia',
+    'phone' => config('site.phone', '+966 53 062 2030'),
+    'email' => 'contact@bazigha.com',
+    'copyright' => '© :year Bazigha. All rights reserved.',
+    'tagline' => 'Bazigha – Building with vision.',
+    'blogs' => 'Blogs',
+    'quick_links' => 'Quick Links',
+    'latest_services' => 'Latest Services',
+    'latest_news' => 'Latest News',
+    'all_services' => 'All Services',
+    'all_blogs' => 'All Blogs',
+];
