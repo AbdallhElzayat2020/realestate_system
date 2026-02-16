@@ -27,10 +27,10 @@
                         </p>
                     </div>
                     <div class="footer-social mt-4">
-                        <a href="https://www.linkedin.com/company/alssad-steel/" target="_blank" rel="noopener" class="footer-social-link" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-                        <a href="https://www.instagram.com/alssadsteel?igsh=OGw1ZnFhN2s4ejcw&utm_source=qr" target="_blank" rel="noopener" class="footer-social-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="https://x.com/alssadsteel?s=21" target="_blank" rel="noopener" class="footer-social-link" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
-                        <a href="https://www.facebook.com/share/1DY3tkYtmT/?mibextid=wwXIfr" target="_blank" rel="noopener" class="footer-social-link" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="footer-social-link" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#" class="footer-social-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="footer-social-link" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="#" class="footer-social-link" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
                     </div>
                 </div>
 

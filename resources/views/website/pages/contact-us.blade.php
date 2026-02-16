@@ -82,20 +82,16 @@
                         <div class="social-media-section mt-4 pt-4 border-top">
                             <h5 class="mb-3">{{ __('contact-us.contact_info_follow_us') }}</h5>
                             <div class="social-icons-contact d-flex gap-3">
-                                <a href="https://www.linkedin.com/company/alssad-steel/" target="_blank"
-                                    class="social-icon-contact" title="LinkedIn">
+                                <a href="#" class="social-icon-contact" title="LinkedIn">
                                     <i class="fab fa-linkedin-in"></i>
                                 </a>
-                                <a href="https://www.instagram.com/alssadsteel?igsh=OGw1ZnFhN2s4ejcw&utm_source=qr"
-                                    target="_blank" class="social-icon-contact" title="Instagram">
+                                <a href="#" class="social-icon-contact" title="Instagram">
                                     <i class="fab fa-instagram"></i>
                                 </a>
-                                <a href="https://x.com/alssadsteel?s=21" target="_blank" class="social-icon-contact"
-                                    title="X">
+                                <a href="#" class="social-icon-contact" title="X">
                                     <i class="fab fa-x-twitter"></i>
                                 </a>
-                                <a href="https://www.facebook.com/share/1DY3tkYtmT/?mibextid=wwXIfr" target="_blank"
-                                    class="social-icon-contact" title="Facebook">
+                                <a href="#" class="social-icon-contact" title="Facebook">
                                     <i class="fab fa-facebook-f"></i>
                                 </a>
                             </div>

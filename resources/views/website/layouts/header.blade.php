@@ -76,14 +76,10 @@
                 </li>
                 <li class="nav-item mt-3 mt-lg-0">
                     <div class="social-links d-flex align-items-center gap-2">
-                        <a class="icon-link" href="https://www.linkedin.com/company/alssad-steel/" target="_blank"
-                            aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                        <a class="icon-link" href="https://www.instagram.com/alssadsteel?igsh=OGw1ZnFhN2s4ejcw&utm_source=qr"
-                            target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a class="icon-link" href="https://x.com/alssadsteel?s=21" target="_blank" aria-label="X"><i
-                                class="fab fa-x-twitter"></i></a>
-                        <a class="icon-link" href="https://www.facebook.com/share/1DY3tkYtmT/?mibextid=wwXIfr"
-                            target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a class="icon-link" href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a class="icon-link" href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a class="icon-link" href="#" aria-label="X"><i class="fab fa-x-twitter"></i></a>
+                        <a class="icon-link" href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
                     </div>
                 </li>
                 {{-- <li class="nav-item mt-3 mt-lg-0">
