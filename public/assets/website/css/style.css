@@ -3932,6 +3932,14 @@ a.service-detail-contact-value:hover {
     color: var(--brand-primary);
 }
 
+[dir="rtl"] .service-detail-contact-value[href^="tel:"],
+[dir="rtl"] .service-detail-contact-value[href^="mailto:"] {
+    direction: ltr;
+    unicode-bidi: embed;
+    display: inline-block;
+    text-align: right;
+}
+
 /* ========== صفحة تفاصيل المشروع – هيدر يبهر + محتوى + خريطة ========== */
 .project-detail-hero {
     position: relative;
