@@ -3,6 +3,7 @@
 
 use App\Http\Controllers\Website\AboutController;
 use App\Http\Controllers\Website\BlogController;
+use App\Http\Controllers\Website\ComingSoonController;
 use App\Http\Controllers\Website\ContactUsController;
 use App\Http\Controllers\Website\FacilitiesController;
 use App\Http\Controllers\Website\FaqController;
@@ -30,7 +31,12 @@ Route::group(
         /* ====================================================================================================================
         ==========================================================  Website Routes ============================================ */
 
-        Route::get('/', [HomeController::class, 'index'])->name('home');
+        if (config('site.coming_soon', false)) {
+            Route::get('/', [ComingSoonController::class, 'index'])->name('home');
+            Route::get('/preview', [HomeController::class, 'index'])->name('home.preview');
+        } else {
+            Route::get('/', [HomeController::class, 'index'])->name('home');
+        }
 
         Route::get('/about', [AboutController::class, 'index'])->name('about');
 
