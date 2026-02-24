@@ -261,55 +261,6 @@
         </div>
     </section>
 
-    @if(isset($testimonials) && $testimonials->count() > 0)
-    <!-- 8. آراء العملاء - سلايدر Swiper -->
-    <section id="testimonials" class="testimonials-section py-5 light_background">
-        <div class="container">
-            <header class="section-header" data-aos="fade-up" data-aos-duration="500">
-                <h2 class="section-header__title">{{ __('home.testimonials_title') }}</h2>
-                <p class="section-header__subtitle">{{ __('home.testimonials_subtitle') }}</p>
-                <div class="section-header__line"></div>
-            </header>
-            <div class="testimonials-swiper-wrap position-relative">
-                    <div class="swiper testimonials-swiper">
-                        <div class="swiper-wrapper">
-                            @foreach($testimonials as $t)
-                                <div class="swiper-slide">
-                                    <div class="testimonial-card">
-                                        <div class="testimonial-card-inner">
-                                            <div class="testimonial-quote-icon">
-                                                <i class="fas fa-quote-right"></i>
-                                            </div>
-                                            <p class="testimonial-text">{{ $t->getTranslation('content', app()->getLocale()) }}</p>
-                                            <div class="testimonial-author">
-                                                @if($t->image)
-                                                    <img src="{{ asset($t->image) }}" alt="{{ $t->getTranslation('name', app()->getLocale()) }}" class="testimonial-avatar" loading="lazy">
-                                                @else
-                                                    <span class="testimonial-avatar testimonial-avatar-placeholder">
-                                                        <i class="fas fa-user"></i>
-                                                    </span>
-                                                @endif
-                                                <div class="testimonial-meta">
-                                                    <span class="testimonial-name">{{ $t->getTranslation('name', app()->getLocale()) }}</span>
-                                                    @if($t->getTranslation('role', app()->getLocale()))
-                                                        <span class="testimonial-role">{{ $t->getTranslation('role', app()->getLocale()) }}</span>
-                                                    @endif
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            @endforeach
-                        </div>
-                        <div class="swiper-pagination testimonials-pagination"></div>
-                        <div class="swiper-button-prev testimonials-prev"></div>
-                        <div class="swiper-button-next testimonials-next"></div>
-                    </div>
-                </div>
-        </div>
-    </section>
-    @endif
-
     @if(isset($homeBlogs) && $homeBlogs->count() > 0)
     <!-- المدونات – آخر قسم في الصفحة الرئيسية -->
     <section id="home-blogs" class="home-section home-blogs-section py-5">
