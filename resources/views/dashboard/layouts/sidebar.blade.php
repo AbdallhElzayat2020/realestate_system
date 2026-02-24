@@ -99,5 +99,12 @@
             </a>
         </li>
 
+        <li class="menu-item {{ request()->routeIs('dashboard.settings.*') ? 'active' : '' }}">
+            <a href="{{ route('dashboard.settings.edit') }}" class="menu-link">
+                <i class="menu-icon tf-icons ti ti-settings"></i>
+                <div data-i18n="Settings">Settings</div>
+            </a>
+        </li>
+
     </ul>
 </aside>

@@ -14,7 +14,7 @@ return [
     'phone_label' => 'Phone',
     'email_label' => 'Email',
     'address' => 'Riyadh, Kingdom of Saudi Arabia',
-    'phone' => config('site.phone', '+966 53 062 2030'),
+    'phone' => '+966 53 062 2030',
     'email' => 'contact@bazigha.com',
     'copyright' => '© :year Bazigha. All rights reserved.',
     'tagline' => 'Bazigha – Building with vision.',

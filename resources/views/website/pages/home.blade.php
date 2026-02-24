@@ -1,7 +1,7 @@
 @extends('website.layouts.master')
 @section('title', 'home')
 @section('content')
-    <!-- 1. البانر -->
+   {{-- Banner --}}
     <section class="hero-section">
         <div class="hero-bg-image" style="background-image: url('{{ asset('assets/website/images/haus_bg.jpeg') }}');"></div>
         <div class="hero-bg-shine"></div>
@@ -12,12 +12,22 @@
                 <h1 class="display-4 fw-bold mb-4 hero-text hero-title">{{ __('home.hero_company_name') }}</h1>
                 <p class="lead mb-2 hero-text hero-desc">{{ __('home.hero_tagline') }}</p>
                 <p class="mb-4 hero-text hero-desc opacity-90">{{ __('home.hero_description') }}</p>
-                <a href="#about" class="btn btn-primary btn-lg rounded-4 hero-cta">{{ __('home.hero_more_about') }}</a>
+                <div class="d-flex flex-wrap gap-2">
+                    <a href="#about" class="btn btn-primary btn-lg rounded-4 hero-cta">
+                        {{ __('home.hero_more_about') }}
+                    </a>
+                    <a href="{{ route('projects') }}" class="btn btn-outline-primary btn-lg rounded-4">
+                        تعرف على مشاريعنا
+                    </a>
+                    <a href="{{ route('quote') }}" class="btn btn-outline-primary btn-lg rounded-4">
+                        احجز استشارة مجانية
+                    </a>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- 2. من نحن -->
+    {{-- About --}}
     <section id="about" class="home-section about-section py-5">
         <div class="container">
             <div class="row align-items-center g-4">
@@ -79,7 +89,7 @@
     </section>
     @endif
 
-    <!-- 4. أرقامنا تتحدث -->
+    {{-- Stats --}}
     @php
         $statNumbers = [__('home.stat_1_number'), __('home.stat_2_number'), __('home.stat_3_number'), __('home.stat_4_number')];
         $statParsed = array_map(function ($s) {
@@ -168,7 +178,10 @@
     </section>
     @endif
 
-    @if(isset($partners) && $partners->count() > 0)
+    @php
+        $activePartners = isset($partners) ? $partners->where('status', 'active') : collect();
+    @endphp
+    @if($activePartners->count() > 0)
     <!-- 6. شركاء النجاح -->
     <section id="partners" class="py-5 light_background">
         <div class="container">
@@ -180,7 +193,7 @@
             <div class="row justify-content-center">
                     <div class="col-12" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">
                         <div class="d-flex flex-wrap justify-content-center align-items-center gap-4 py-4">
-                            @foreach($partners as $partner)
+                            @foreach($activePartners as $partner)
                                 <div class="partners-card rounded-3 p-4 bg-white shadow-sm border-0 text-center">
                                     @if($partner->link)
                                         <a href="{{ $partner->link }}" target="_blank" rel="noopener" class="partners-card-link text-decoration-none d-block">

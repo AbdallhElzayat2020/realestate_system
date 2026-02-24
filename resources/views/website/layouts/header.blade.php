@@ -75,12 +75,26 @@
                     </div>
                 </li>
                 <li class="nav-item mt-3 mt-lg-0">
-                    <div class="social-links d-flex align-items-center gap-2">
-                        <a class="icon-link" href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                        <a class="icon-link" href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a class="icon-link" href="#" aria-label="X"><i class="fab fa-x-twitter"></i></a>
-                        <a class="icon-link" href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                    </div>
+                    @if (!empty($socialLinksEnabled))
+                        <div class="social-links d-flex align-items-center gap-2">
+                            @if (!empty($socialLinks['linkedin']))
+                                <a class="icon-link" href="{{ $socialLinks['linkedin'] }}" target="_blank" rel="noopener noreferrer"
+                                    aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            @endif
+                            @if (!empty($socialLinks['instagram']))
+                                <a class="icon-link" href="{{ $socialLinks['instagram'] }}" target="_blank" rel="noopener noreferrer"
+                                    aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            @endif
+                            @if (!empty($socialLinks['x']))
+                                <a class="icon-link" href="{{ $socialLinks['x'] }}" target="_blank" rel="noopener noreferrer"
+                                    aria-label="X"><i class="fab fa-x-twitter"></i></a>
+                            @endif
+                            @if (!empty($socialLinks['facebook']))
+                                <a class="icon-link" href="{{ $socialLinks['facebook'] }}" target="_blank" rel="noopener noreferrer"
+                                    aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                            @endif
+                        </div>
+                    @endif
                 </li>
                 {{-- <li class="nav-item mt-3 mt-lg-0">
                     <a class="btn btn-primary px-4" href="{{ route('quote') }}">{{ __('header.request_quote') }}</a>

@@ -14,7 +14,7 @@ return [
     'phone_label' => 'رقم الهاتف',
     'email_label' => 'الايميل',
     'address' => 'الرياض، المملكة العربية السعودية',
-    'phone' => config('site.phone', '+966 53 062 2030'),
+    'phone' => '+966 53 062 2030',
     'email' => 'contact@bazigha.com',
     'copyright' => '© :year بازغة. جميع الحقوق محفوظة.',
     'tagline' => 'بازغة – ننهض برؤية واضحة.',

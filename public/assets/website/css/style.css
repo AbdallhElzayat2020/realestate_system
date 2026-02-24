@@ -1071,16 +1071,31 @@ a:hover .partners-card {
 }
 
 .btn-primary {
-    background-color: #F6AF47;
-    border-color: #F6AF47;
+    background-color: var(--brand-primary);
+    border-color: var(--brand-primary);
     padding: 10px 30px;
     font-size: 1rem;
-    transition: background-color 0.2s ease, border-color 0.2s ease;
+    transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
 }
 
 .btn-primary:hover {
-    background-color: #E79227;
-    border-color: #E79227;
+    background-color: var(--brand-accent);
+    border-color: var(--brand-accent);
+}
+
+.btn-outline-primary {
+    color: var(--brand-primary);
+    border-color: var(--brand-primary);
+    padding: 10px 30px;
+    font-size: 1rem;
+    background-color: transparent;
+    transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.btn-outline-primary:hover {
+    color: #fff;
+    background-color: var(--brand-primary);
+    border-color: var(--brand-primary);
 }
 
 #about {

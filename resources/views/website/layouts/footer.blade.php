@@ -27,10 +27,24 @@
                         </p>
                     </div>
                     <div class="footer-social mt-4">
-                        <a href="#" class="footer-social-link" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-                        <a href="#" class="footer-social-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="#" class="footer-social-link" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
-                        <a href="#" class="footer-social-link" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        @if (!empty($socialLinksEnabled))
+                            @if (!empty($socialLinks['linkedin']))
+                                <a href="{{ $socialLinks['linkedin'] }}" target="_blank" rel="noopener noreferrer" class="footer-social-link"
+                                    aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                            @endif
+                            @if (!empty($socialLinks['instagram']))
+                                <a href="{{ $socialLinks['instagram'] }}" target="_blank" rel="noopener noreferrer" class="footer-social-link"
+                                    aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                            @endif
+                            @if (!empty($socialLinks['x']))
+                                <a href="{{ $socialLinks['x'] }}" target="_blank" rel="noopener noreferrer" class="footer-social-link"
+                                    aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+                            @endif
+                            @if (!empty($socialLinks['facebook']))
+                                <a href="{{ $socialLinks['facebook'] }}" target="_blank" rel="noopener noreferrer" class="footer-social-link"
+                                    aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                            @endif
+                        @endif
                     </div>
                 </div>
 
@@ -86,7 +100,14 @@
     <div class="footer-bottom">
         <div class="container">
             <p class="footer-bottom-copyright mb-2">{{ str_replace(':year', date('Y'), __('footer.copyright')) }}</p>
-            <p class="footer-bottom-tagline">{{ __('footer.tagline') }}</p>
+            <p class="footer-bottom-tagline mb-1">{{ __('footer.tagline') }}</p>
+            <a class="footer-bottom-link" href="">
+                <p class="text-muted small mb-0">
+                    تم التطوير والبرمجة بواسطة عبدالله
+                    <a href="https://wa.me/201212484233" target="_blank" rel="noopener noreferrer" class="footer-contact-link ms-1">
+                    </a>
+                </p>
+            </a>
         </div>
     </div>
 </footer>

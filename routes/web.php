@@ -31,12 +31,9 @@ Route::group(
         /* ====================================================================================================================
         ==========================================================  Website Routes ============================================ */
 
-        if (config('site.coming_soon', false)) {
-            Route::get('/', [ComingSoonController::class, 'index'])->name('home');
-            Route::get('/preview', [HomeController::class, 'index'])->name('home.preview');
-        } else {
-            Route::get('/', [HomeController::class, 'index'])->name('home');
-        }
+        Route::get('/coming-soon', [ComingSoonController::class, 'index'])->name('coming-soon');
+        Route::get('/preview', [HomeController::class, 'index'])->name('home.preview');
+        Route::get('/', [HomeController::class, 'index'])->name('home');
 
         Route::get('/about', [AboutController::class, 'index'])->name('about');
 

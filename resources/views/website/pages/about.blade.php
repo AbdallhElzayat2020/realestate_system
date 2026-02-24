@@ -48,6 +48,19 @@
                 </div>
             </div>
 
+            <div class="row g-4 mb-5">
+                <div class="col-12">
+                    <div class="about-vm-card about-vm-card--vision">
+                        <div class="about-vm-icon"><i class="fas fa-drafting-compass"></i></div>
+                        <h3 class="about-vm-heading">{{ __('about.founders_vision_title') }}</h3>
+                        <p class="about-vm-text mb-2">{{ __('about.founders_vision_paragraph_1') }}</p>
+                        <p class="about-vm-text mb-2">{{ __('about.founders_vision_paragraph_2') }}</p>
+                        <p class="about-vm-text mb-2">{{ __('about.founders_vision_paragraph_3') }}</p>
+                        <p class="about-vm-text mb-0">{{ __('about.founders_vision_paragraph_4') }}</p>
+                    </div>
+                </div>
+            </div>
+
             <div class="about-objectives-wrap" dir="{{ app()->getLocale() === 'ar' ? 'rtl' : 'ltr' }}">
                 <h3 class="about-objectives-title">
                     <i class="fas fa-list-check about-objectives-title-icon"></i>

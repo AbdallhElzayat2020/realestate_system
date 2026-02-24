@@ -14,6 +14,7 @@ use App\Http\Controllers\Dashboard\ServiceController;
 use App\Http\Controllers\Dashboard\ProjectController;
 use App\Http\Controllers\Dashboard\PartnerController;
 use App\Http\Controllers\Dashboard\TestimonialController;
+use App\Http\Controllers\Dashboard\SettingsController;
 use Illuminate\Support\Facades\Route;
 
 /* Public Routes Dashboard - Auth */
@@ -67,6 +68,10 @@ Route::middleware(['auth'])->prefix('admin')->name('dashboard.')->group(function
     // Profile Routes
     Route::get('/profile/edit', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::put('/profile/update', [ProfileController::class, 'update'])->name('profile.update');
+
+    // Site Settings
+    Route::get('/settings', [SettingsController::class, 'edit'])->name('settings.edit');
+    Route::put('/settings', [SettingsController::class, 'update'])->name('settings.update');
 });
 
 /* Logout Route - Must be outside prefix to work correctly */
