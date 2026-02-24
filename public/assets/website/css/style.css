@@ -1084,8 +1084,8 @@ a:hover .partners-card {
 }
 
 .btn-outline-primary {
-    color: var(--brand-primary);
-    border-color: var(--brand-primary);
+    color: var(--brand-primary) !important;
+    border-color: var(--brand-primary) !important;
     padding: 10px 30px;
     font-size: 1rem;
     background-color: transparent;
@@ -1093,9 +1093,9 @@ a:hover .partners-card {
 }
 
 .btn-outline-primary:hover {
-    color: #fff;
-    background-color: var(--brand-primary);
-    border-color: var(--brand-primary);
+    color: #fff !important;
+    background-color: var(--brand-primary) !important;
+    border-color: var(--brand-primary) !important;
 }
 
 #about {
