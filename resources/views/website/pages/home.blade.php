@@ -19,7 +19,7 @@
                     <a href="{{ route('projects') }}" class="btn btn-outline-primary btn-lg rounded-4">
                         تعرف على مشاريعنا
                     </a>
-                    <a href="{{ route('quote') }}" class="btn btn-outline-primary btn-lg rounded-4">
+                    <a href="{{ route('contact-us') }}" class="btn btn-outline-primary btn-lg rounded-4">
                         احجز استشارة مجانية
                     </a>
                 </div>
