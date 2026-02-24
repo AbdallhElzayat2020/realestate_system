@@ -24,11 +24,11 @@ class StoreProjectRequest extends FormRequest
             'description.ar' => ['nullable', 'string'],
             'tags' => ['nullable', 'string', 'max:500'],
             'map' => ['nullable', 'string', 'max:2000'],
-            'thumbnail' => ['nullable', 'image', 'max:2048'],
-            'banner' => ['nullable', 'image', 'max:5120'],
-            'main_image' => ['nullable', 'image', 'max:5120'],
+            'thumbnail' => ['nullable', 'image', 'mimes:jpeg,png,jpg,gif,svg,webp', 'max:2048'],
+            'banner' => ['nullable', 'image', 'mimes:jpeg,png,jpg,gif,svg,webp', 'max:5120'],
+            'main_image' => ['nullable', 'image', 'mimes:jpeg,png,jpg,gif,svg,webp', 'max:5120'],
             'images' => ['nullable', 'array'],
-            'images.*' => ['image', 'max:5120'],
+            'images.*' => ['image', 'mimes:jpeg,png,jpg,gif,svg,webp', 'max:5120'],
         ];
     }
 }

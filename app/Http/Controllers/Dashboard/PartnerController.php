@@ -60,6 +60,12 @@ class PartnerController extends Controller
         if (!File::exists($dir)) {
             File::makeDirectory($dir, 0755, true);
         }
+        // Remove existing logo if requested
+        if ($request->boolean('remove_logo') && $partner->logo && File::exists(public_path($partner->logo))) {
+            File::delete(public_path($partner->logo));
+            $partner->logo = null;
+        }
+        // Upload new logo if provided
         if ($request->hasFile('logo')) {
             if ($partner->logo && File::exists(public_path($partner->logo))) {
                 File::delete(public_path($partner->logo));

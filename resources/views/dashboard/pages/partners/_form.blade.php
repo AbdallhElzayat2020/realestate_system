@@ -29,14 +29,19 @@
     </div>
     <div class="col-12">
         <label class="form-label" for="logo">Logo / الشعار</label>
-        <input type="file" id="logo" name="logo" class="form-control @error('logo') is-invalid @enderror" accept="image/*"
-            {{ isset($partner) && $partner->exists ? '' : 'required' }}>
+        <input type="file" id="logo" name="logo" class="form-control @error('logo') is-invalid @enderror" accept="image/*">
         @if(isset($partner) && $partner->logo)
-            <div class="mt-2">
+            <div class="mt-2 d-flex align-items-center gap-3">
                 <img src="{{ asset($partner->logo) }}" alt="" class="img-fluid rounded border" style="max-height: 80px; object-fit: contain;">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="1" id="remove_logo" name="remove_logo">
+                    <label class="form-check-label" for="remove_logo">
+                        حذف الشعار الحالي
+                    </label>
+                </div>
             </div>
         @endif
-        <small class="text-muted d-block mt-1">Logo image (optional when editing)</small>
+        <small class="text-muted d-block mt-1">Logo image (optional)</small>
         @error('logo')
             <div class="invalid-feedback d-block">{{ $message }}</div>
         @enderror

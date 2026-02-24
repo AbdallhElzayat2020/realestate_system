@@ -20,8 +20,8 @@ class StoreServiceRequest extends FormRequest
             'slug' => ['nullable', 'string', 'max:255', 'unique:services,slug'],
             'description.en' => ['nullable', 'string'],
             'description.ar' => ['nullable', 'string'],
-            'thumbnail' => ['nullable', 'image', 'max:2048'],
-            'banner' => ['nullable', 'image', 'max:2048'],
+            'thumbnail' => ['nullable', 'image', 'mimes:jpeg,png,jpg,gif,svg,webp', 'max:2048'],
+            'banner' => ['nullable', 'image', 'mimes:jpeg,png,jpg,gif,svg,webp', 'max:2048'],
         ];
     }
 }

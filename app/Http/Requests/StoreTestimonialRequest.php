@@ -20,7 +20,7 @@ class StoreTestimonialRequest extends FormRequest
             'role.ar' => ['nullable', 'string', 'max:120'],
             'content.en' => ['required', 'string', 'max:2000'],
             'content.ar' => ['required', 'string', 'max:2000'],
-            'image' => ['nullable', 'image', 'max:2048'],
+            'image' => ['nullable', 'image', 'mimes:jpeg,png,jpg,gif,svg,webp', 'max:2048'],
             'status' => ['required', 'in:active,inactive'],
             'order' => ['nullable', 'integer', 'min:0'],
         ];

@@ -21,7 +21,7 @@ class StoreBlogRequest extends FormRequest
             'slug' => ['nullable', 'string', 'max:255', 'unique:blogs,slug'],
             'content.en' => ['nullable', 'string'],
             'content.ar' => ['nullable', 'string'],
-            'image' => ['nullable', 'image', 'max:2048'],
+            'image' => ['nullable', 'image', 'mimes:jpeg,png,jpg,gif,svg,webp', 'max:2048'],
         ];
     }
 
