@@ -16,7 +16,7 @@ return [
     'services_title' => 'خدماتنا',
     'services_view_all' => 'عرض كل الخدمات',
     'stats_title' => 'أرقامنا تتحدث',
-    'stat_1_number' => '50+',
+    'stat_1_number' => '3+',
     'stat_1_label' => 'مشروع منجز',
     'stat_2_number' => '15+',
     'stat_2_label' => 'سنة خبرة',

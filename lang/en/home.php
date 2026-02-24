@@ -16,7 +16,7 @@ return [
     'services_title' => 'Our Services',
     'services_view_all' => 'View All Services',
     'stats_title' => 'Our Numbers Speak',
-    'stat_1_number' => '50+',
+    'stat_1_number' => '3+',
     'stat_1_label' => 'Projects Delivered',
     'stat_2_number' => '15+',
     'stat_2_label' => 'Years of Experience',

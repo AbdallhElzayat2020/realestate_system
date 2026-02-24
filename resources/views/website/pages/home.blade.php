@@ -124,12 +124,6 @@
                         <p class="stat-label">{{ __('home.stat_3_label') }}</p>
                     </div>
                 </div>
-                <div class="col-6 col-md-3" data-aos="fade-up" data-aos-duration="500" data-aos-delay="250">
-                    <div class="stat-card">
-                        <div class="stat-number stats-counter" data-count="{{ $statParsed[3]['count'] }}" data-suffix="{{ $statParsed[3]['suffix'] }}" data-duration="2000">0{{ $statParsed[3]['suffix'] }}</div>
-                        <p class="stat-label">{{ __('home.stat_4_label') }}</p>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
