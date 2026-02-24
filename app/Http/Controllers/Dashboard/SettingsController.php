@@ -26,6 +26,9 @@ class SettingsController extends Controller implements HasMiddleware
 
         $whatsapp_url = SiteSetting::getValue('whatsapp_url', (string) config('site.whatsapp_url', ''));
 
+        $site_phone = SiteSetting::getValue('site_phone', (string) config('site.phone'));
+        $site_phone_tel = SiteSetting::getValue('site_phone_tel', (string) config('site.phone_tel'));
+
         $social_linkedin_url = SiteSetting::getValue('social_linkedin_url', (string) data_get(config('site.social'), 'linkedin', ''));
         $social_instagram_url = SiteSetting::getValue('social_instagram_url', (string) data_get(config('site.social'), 'instagram', ''));
         $social_x_url = SiteSetting::getValue('social_x_url', (string) data_get(config('site.social'), 'x', ''));
@@ -37,6 +40,8 @@ class SettingsController extends Controller implements HasMiddleware
             'contact_buttons_enabled',
             'phone_button_enabled',
             'whatsapp_url',
+            'site_phone',
+            'site_phone_tel',
             'social_linkedin_url',
             'social_instagram_url',
             'social_x_url',
@@ -48,6 +53,8 @@ class SettingsController extends Controller implements HasMiddleware
     {
         $request->validate([
             'whatsapp_url' => ['nullable', 'string', 'max:255'],
+            'site_phone' => ['nullable', 'string', 'max:50'],
+            'site_phone_tel' => ['nullable', 'string', 'max:50'],
             'social_linkedin_url' => ['nullable', 'url', 'max:255'],
             'social_instagram_url' => ['nullable', 'url', 'max:255'],
             'social_x_url' => ['nullable', 'url', 'max:255'],
@@ -65,6 +72,8 @@ class SettingsController extends Controller implements HasMiddleware
         SiteSetting::setValue('phone_button_enabled', $phoneButtonEnabled);
 
         SiteSetting::setValue('whatsapp_url', (string) $request->input('whatsapp_url', ''));
+        SiteSetting::setValue('site_phone', (string) $request->input('site_phone', ''));
+        SiteSetting::setValue('site_phone_tel', (string) $request->input('site_phone_tel', ''));
         SiteSetting::setValue('social_linkedin_url', (string) $request->input('social_linkedin_url', ''));
         SiteSetting::setValue('social_instagram_url', (string) $request->input('social_instagram_url', ''));
         SiteSetting::setValue('social_x_url', (string) $request->input('social_x_url', ''));

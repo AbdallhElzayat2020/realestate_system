@@ -24,6 +24,15 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
+        // Override contact config values from settings (used across views)
+        $sitePhone = SiteSetting::getValue('site_phone', (string) config('site.phone'));
+        $sitePhoneTel = SiteSetting::getValue('site_phone_tel', (string) config('site.phone_tel'));
+
+        config([
+            'site.phone' => $sitePhone,
+            'site.phone_tel' => $sitePhoneTel,
+        ]);
+
         View::composer(
             ['website.layouts.header', 'website.layouts.footer', 'website.components.social_links'],
             function ($view) {

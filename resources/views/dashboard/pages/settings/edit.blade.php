@@ -138,6 +138,32 @@
                             </div>
                         </div>
 
+                        <div class="row mb-3">
+                            <label class="col-sm-3 col-form-label" for="site_phone">Display phone</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control @error('site_phone') is-invalid @enderror"
+                                    id="site_phone" name="site_phone" value="{{ old('site_phone', $site_phone) }}"
+                                    placeholder="+966 53 000 0000" />
+                                @error('site_phone')
+                                    <div class="invalid-feedback">{{ $message }}</div>
+                                @enderror
+                                <small class="text-muted d-block mt-1">الرقم كما يظهر للعميل في الهيدر/الفوتر وصفحات التواصل.</small>
+                            </div>
+                        </div>
+
+                        <div class="row mb-4">
+                            <label class="col-sm-3 col-form-label" for="site_phone_tel">Phone (tel link)</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control @error('site_phone_tel') is-invalid @enderror"
+                                    id="site_phone_tel" name="site_phone_tel" value="{{ old('site_phone_tel', $site_phone_tel) }}"
+                                    placeholder="966530000000" />
+                                @error('site_phone_tel')
+                                    <div class="invalid-feedback">{{ $message }}</div>
+                                @enderror
+                                <small class="text-muted d-block mt-1">يُستخدم داخل رابط الاتصال <code>tel:</code> بدون مسافات.</small>
+                            </div>
+                        </div>
+
                         <div class="row mb-4">
                             <label class="col-sm-3 col-form-label" for="phone_button_enabled">Call button</label>
                             <div class="col-sm-9">
