@@ -102,7 +102,15 @@
         @error('thumbnail')<div class="invalid-feedback">{{ $message }}</div>@enderror
         @if($project->thumbnail ?? $project->banner ?? $project->main_image ?? null)
             @php $mainImg = $project->thumbnail ?? $project->banner ?? $project->main_image; @endphp
-            <div class="mt-2"><img src="{{ asset($mainImg) }}" alt="" class="img-fluid rounded border" style="max-height: 140px; object-fit: cover;" /></div>
+            <div class="mt-2 d-flex align-items-center gap-3">
+                <img src="{{ asset($mainImg) }}" alt="" class="img-fluid rounded border" style="max-height: 140px; object-fit: cover;" />
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="1" id="remove_thumbnail" name="remove_thumbnail">
+                    <label class="form-check-label" for="remove_thumbnail">
+                        حذف الصورة الحالية بدون رفع بديلة
+                    </label>
+                </div>
+            </div>
         @endif
     </div>
 
@@ -112,10 +120,16 @@
         <small class="text-muted d-block mt-1">صور إضافية تظهر داخل صفحة تفاصيل المشروع. يمكن اختيار أكثر من صورة.</small>
         @error('images')<div class="invalid-feedback">{{ $message }}</div>@enderror
         @if(isset($project->images) && is_array($project->images) && count($project->images) > 0)
-            <div class="row g-2 mt-2">
+            <div class="row g-3 mt-2">
                 @foreach($project->images as $img)
-                    <div class="col-auto">
-                        <img src="{{ asset($img) }}" alt="" class="rounded border" style="width:80px;height:60px;object-fit:cover;" />
+                    <div class="col-auto d-flex flex-column align-items-center">
+                        <img src="{{ asset($img) }}" alt="" class="rounded border mb-1" style="width:80px;height:60px;object-fit:cover;" />
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="remove_images[]" value="{{ $img }}" id="remove_image_{{ md5($img) }}">
+                            <label class="form-check-label small" for="remove_image_{{ md5($img) }}">
+                                حذف
+                            </label>
+                        </div>
                     </div>
                 @endforeach
             </div>

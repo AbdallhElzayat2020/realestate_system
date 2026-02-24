@@ -92,6 +92,18 @@ class ProjectController extends Controller
         $project->tags = $this->parseTags($data['tags'] ?? '');
 
         $dir = $this->uploadDir();
+
+        // Handle removing current main image if requested
+        if ($request->boolean('remove_thumbnail')) {
+            $this->deleteFile($project->thumbnail);
+            $this->deleteFile($project->banner);
+            $this->deleteFile($project->main_image);
+            $project->thumbnail = null;
+            $project->banner = null;
+            $project->main_image = null;
+        }
+
+        // Replace main image if a new file is uploaded
         if ($request->hasFile('thumbnail')) {
             $this->deleteFile($project->thumbnail);
             $this->deleteFile($project->banner);
@@ -101,13 +113,31 @@ class ProjectController extends Controller
             $project->banner = $path;
             $project->main_image = $path;
         }
-        if ($request->hasFile('images')) {
-            $existing = $project->images ?? [];
-            foreach ($request->file('images') as $file) {
-                $existing[] = 'projects/' . $this->saveFile($file, $dir, 'img');
+
+        // Start from existing gallery images
+        $images = $project->images ?? [];
+
+        // Remove selected gallery images
+        $imagesToRemove = (array) $request->input('remove_images', []);
+        if (!empty($imagesToRemove) && !empty($images)) {
+            foreach ($imagesToRemove as $removePath) {
+                if (in_array($removePath, $images, true)) {
+                    $this->deleteFile($removePath);
+                }
             }
-            $project->images = $existing;
+            $images = array_values(array_filter($images, function ($img) use ($imagesToRemove) {
+                return !in_array($img, $imagesToRemove, true);
+            }));
         }
+
+        // Append newly uploaded gallery images
+        if ($request->hasFile('images')) {
+            foreach ($request->file('images') as $file) {
+                $images[] = 'projects/' . $this->saveFile($file, $dir, 'img');
+            }
+        }
+
+        $project->images = $images;
         $project->save();
 
         return redirect()->route('dashboard.projects.index')->with('success', 'Project updated successfully.');
