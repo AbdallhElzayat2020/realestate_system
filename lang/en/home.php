@@ -6,6 +6,8 @@ return [
     'hero_tagline' => 'Emerging Spaces. Defining Skylines.',
     'hero_description' => 'A visionary real estate and construction firm based in Riyadh, harmonizing modern design with cultural essence.',
     'hero_more_about' => 'More About Us',
+    'hero_projects_cta' => 'Our Projects',
+    'hero_consult_cta' => 'Free Consultation',
     'hero_video_not_supported' => 'Your browser does not support the video tag.',
     'about_title' => 'About Us',
     'about_intro' => 'Bazigha (بازغة) means emerging — and that\'s exactly what we do.',

@@ -17,10 +17,10 @@
                         {{ __('home.hero_more_about') }}
                     </a>
                     <a href="{{ route('projects') }}" class="btn btn-outline-primary btn-lg rounded-4">
-                        تعرف على مشاريعنا
+                        {{ __('home.hero_projects_cta') }}
                     </a>
                     <a href="{{ route('contact-us') }}" class="btn btn-outline-primary btn-lg rounded-4">
-                        احجز استشارة مجانية
+                        {{ __('home.hero_consult_cta') }}
                     </a>
                 </div>
             </div>
