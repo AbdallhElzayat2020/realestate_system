@@ -24,4 +24,6 @@ return [
     'latest_news' => 'آخر الأخبار',
     'all_services' => 'كل الخدمات',
     'all_blogs' => 'كل المدونة',
+    'developed_by' => 'تم التطوير والبرمجة بواسطة',
+    'developer_name' => 'عبدالله الزيات',
 ];

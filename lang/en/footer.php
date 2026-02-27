@@ -24,4 +24,6 @@ return [
     'latest_news' => 'Latest News',
     'all_services' => 'All Services',
     'all_blogs' => 'All Blogs',
+    'developed_by' => 'Developed by',
+    'developer_name' => 'Abdallh Elzayat',
 ];

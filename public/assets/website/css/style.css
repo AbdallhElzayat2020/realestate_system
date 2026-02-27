@@ -1819,7 +1819,7 @@ a:hover .partners-card {
 .site-footer .footer-bottom {
     background-color: rgba(0, 0, 0, 0.25);
     color: rgba(255, 255, 255, 0.7);
-    padding: 1.25rem 0;
+    padding: 1.1rem 0;
     font-size: 0.9rem;
     text-align: center;
 }
@@ -1832,6 +1832,12 @@ a:hover .partners-card {
 .site-footer .footer-bottom-tagline {
     font-size: 0.85rem;
     opacity: 0.9;
+}
+.site-footer .footer-bottom-inner {
+    row-gap: 0.3rem;
+}
+.site-footer .footer-bottom-dev .footer-contact-link {
+    font-weight: 500;
 }
 .site-footer .footer-bottom-nav {
     margin-top: 0.5rem;

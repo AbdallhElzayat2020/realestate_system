@@ -99,15 +99,27 @@
 
     <div class="footer-bottom">
         <div class="container">
-            <p class="footer-bottom-copyright mb-2">{{ str_replace(':year', date('Y'), __('footer.copyright')) }}</p>
-            <p class="footer-bottom-tagline mb-1">{{ __('footer.tagline') }}</p>
-            <a class="footer-bottom-link" href="">
-                <p class="text-muted small mb-0">
-                    تم التطوير والبرمجة بواسطة عبدالله
-                    <a href="https://wa.me/201212484233" target="_blank" rel="noopener noreferrer" class="footer-contact-link ms-1">
+            <div class="footer-bottom-inner d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+                <div class="text-center text-md-start">
+                    <p class="footer-bottom-copyright">
+                        {{ str_replace(':year', date('Y'), __('footer.copyright')) }}
+                    </p>
+                    <p class="footer-bottom-tagline mb-0">
+                        {{ __('footer.tagline') }}
+                    </p>
+                </div>
+                <div class="footer-bottom-dev text-center text-md-end">
+                    <span class="text-white small">
+                        {{ __('footer.developed_by') }}
+                    </span>
+                    <a href="https://abdallh-elzayat.me/"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="footer-contact-link ms-1 small" style="color: var(--brand-primary);">
+                        {{ __('footer.developer_name') }}
                     </a>
-                </p>
-            </a>
+                </div>
+            </div>
         </div>
     </div>
 </footer>
