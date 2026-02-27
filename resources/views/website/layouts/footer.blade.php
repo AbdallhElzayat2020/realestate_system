@@ -6,7 +6,7 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="footer-brand mb-4">
                         <a href="{{ route('home') }}" class="footer-logo-link d-inline-block">
-                            <img src="{{ asset('assets/website/images/logo.png') }}" alt="{{ __('footer.logo_alt') }}" class="footer-logo" />
+                            <img src="{{ asset('assets/website/images/footer_logo.png') }}" alt="{{ __('footer.logo_alt') }}" class="footer-logo" />
                         </a>
                     </div>
                     <p class="footer-about text-muted small mb-4">
