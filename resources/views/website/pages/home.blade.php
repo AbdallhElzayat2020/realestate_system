@@ -40,7 +40,7 @@
                 </div>
                 <div class="col-md-6 order-md-2 order-1 mb-4 mb-md-0" data-aos="fade-up" data-aos-duration="600" data-aos-delay="150">
                     <div class="about-section-image-wrap rounded-3 overflow-hidden shadow-sm">
-                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80" class="img-fluid" alt="{{ __('home.about_title') }}" loading="lazy" />
+                        <img src="{{ asset('assets/website/images/about.jpeg') }}" class="img-fluid" alt="{{ __('home.about_title') }}" loading="lazy" />
                     </div>
                 </div>
             </div>
@@ -91,7 +91,7 @@
 
     {{-- Stats --}}
     @php
-        $statNumbers = [__('home.stat_1_number'), __('home.stat_2_number'), __('home.stat_3_number'), __('home.stat_4_number')];
+        $statNumbers = [__('home.stat_1_number'), __('home.stat_2_number'), __('home.stat_3_number')];
         $statParsed = array_map(function ($s) {
             if (preg_match('/^(\d+)(.*)$/', $s, $m)) {
                 return ['count' => (int) $m[1], 'suffix' => $m[2]];
