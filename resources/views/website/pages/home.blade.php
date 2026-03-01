@@ -91,7 +91,7 @@
 
     {{-- Stats --}}
     @php
-        $statNumbers = [__('home.stat_1_number'), __('home.stat_2_number'), __('home.stat_3_number')];
+        $statNumbers = [__('home.stat_1_number'), __('home.stat_2_number'), __('home.stat_3_number'), __('home.stat_4_number')];
         $statParsed = array_map(function ($s) {
             if (preg_match('/^(\d+)(.*)$/', $s, $m)) {
                 return ['count' => (int) $m[1], 'suffix' => $m[2]];
@@ -124,6 +124,7 @@
                         <p class="stat-label">{{ __('home.stat_3_label') }}</p>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
