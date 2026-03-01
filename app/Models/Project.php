@@ -25,6 +25,7 @@ class Project extends Model
         'tags',
         'map',
         'images',
+        'brochure',
     ];
 
     protected $casts = [

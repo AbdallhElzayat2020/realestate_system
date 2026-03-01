@@ -25,6 +25,13 @@
                     @if($project->service)
                         <a href="{{ route('services.show', $project->service) }}" class="project-detail-category-badge">{{ $project->service->getTranslation('name', app()->getLocale()) }}</a>
                     @endif
+                    @if($project->brochure)
+                        <a href="{{ asset($project->brochure) }}" target="_blank" rel="noopener noreferrer" class="project-detail-map-cta project-detail-hero-map-cta" download>
+                            <span class="project-detail-map-cta-icon"><i class="fas fa-file-pdf"></i></span>
+                            <span class="project-detail-map-cta-text">{{ __('projects.download_brochure') }}</span>
+                            <i class="fas fa-download project-detail-map-cta-arrow"></i>
+                        </a>
+                    @endif
                     @if($isMapUrl)
                         <a href="{{ $mapTrimmed }}" target="_blank" rel="noopener noreferrer" class="project-detail-map-cta project-detail-hero-map-cta">
                             <span class="project-detail-map-cta-icon"><i class="fas fa-map-marker-alt"></i></span>
@@ -44,6 +51,14 @@
             @if ($description)
                 <div class="project-detail-body">
                     <div class="project-detail-description">{!! $description !!}</div>
+                </div>
+            @endif
+
+            @if($project->brochure)
+                <div class="mt-4">
+                    <a href="{{ asset($project->brochure) }}" target="_blank" rel="noopener noreferrer" class="btn btn-primary" download>
+                        <i class="fas fa-file-pdf me-2"></i>{{ __('projects.download_brochure') }}
+                    </a>
                 </div>
             @endif
 

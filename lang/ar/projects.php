@@ -7,4 +7,5 @@ return [
     'prev_image' => 'السابقة',
     'next_image' => 'التالية',
     'view_on_map' => 'فتح الموقع على الخريطة',
+    'download_brochure' => 'تنزيل البرشور',
 ];

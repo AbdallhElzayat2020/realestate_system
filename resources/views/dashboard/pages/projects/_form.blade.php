@@ -135,6 +135,23 @@
             </div>
         @endif
     </div>
+
+    {{-- برشور المشروع (PDF) --}}
+    <div class="col-12">
+        <label class="form-label" for="brochure">برشور المشروع (PDF) / Project Brochure</label>
+        <input type="file" id="brochure" name="brochure" class="form-control @error('brochure') is-invalid @enderror" accept=".pdf,application/pdf" />
+        <small class="text-muted d-block mt-1">ملف PDF واحد. يظهر زر "تنزيل البرشور" في صفحة تفاصيل المشروع.</small>
+        @error('brochure')<div class="invalid-feedback">{{ $message }}</div>@enderror
+        @if(isset($project) && $project->brochure)
+            <div class="mt-2 d-flex align-items-center gap-3">
+                <a href="{{ asset($project->brochure) }}" target="_blank" class="btn btn-sm btn-outline-primary"><i class="ti ti-file-type-pdf me-1"></i>عرض البرشور الحالي</a>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="1" id="remove_brochure" name="remove_brochure">
+                    <label class="form-check-label" for="remove_brochure">حذف البرشور الحالي</label>
+                </div>
+            </div>
+        @endif
+    </div>
 </div>
 <div class="d-flex gap-2 mt-4">
     <button type="submit" class="btn btn-primary"><i class="ti ti-check me-1"></i> Save</button>

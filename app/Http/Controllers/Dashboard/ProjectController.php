@@ -59,6 +59,9 @@ class ProjectController extends Controller
             }
         }
         $project->images = $images;
+        if ($request->hasFile('brochure')) {
+            $project->brochure = 'projects/' . $this->saveFile($request->file('brochure'), $dir, 'brochure');
+        }
         $project->save();
 
         return redirect()->route('dashboard.projects.index')->with('success', 'Project created successfully.');
@@ -138,6 +141,16 @@ class ProjectController extends Controller
         }
 
         $project->images = $images;
+
+        if ($request->boolean('remove_brochure')) {
+            $this->deleteFile($project->brochure);
+            $project->brochure = null;
+        }
+        if ($request->hasFile('brochure')) {
+            $this->deleteFile($project->brochure);
+            $project->brochure = 'projects/' . $this->saveFile($request->file('brochure'), $dir, 'brochure');
+        }
+
         $project->save();
 
         return redirect()->route('dashboard.projects.index')->with('success', 'Project updated successfully.');
@@ -154,6 +167,7 @@ class ProjectController extends Controller
                 $this->deleteFile($path);
             }
         }
+        $this->deleteFile($project->brochure);
         $project->delete();
         return redirect()->route('dashboard.projects.index')->with('success', 'Project deleted successfully.');
     }
