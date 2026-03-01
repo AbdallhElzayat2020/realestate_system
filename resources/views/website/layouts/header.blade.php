@@ -1,7 +1,7 @@
 <nav id="mainNav" class="navbar navbar-expand-lg bg-body-tertiary fixed-top site-navbar">
     <div class="container px-lg-1">
         <a class="navbar-brand d-flex align-items-center gap-2" href="{{ route('home') }}">
-            <img src="{{asset('assets/website/images/log.png')}}" alt="{{ __('header.company_logo') }}" height="95"
+            <img src="{{asset('assets/website/images/log.png')}}" alt="{{ __('header.company_logo') }}" height="85"
                 class="ms-2 site-logo" />
         </a>
 
