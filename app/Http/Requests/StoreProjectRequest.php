@@ -29,7 +29,7 @@ class StoreProjectRequest extends FormRequest
             'main_image' => ['nullable', 'image', 'mimes:jpeg,png,jpg,gif,svg,webp', 'max:5120'],
             'images' => ['nullable', 'array'],
             'images.*' => ['image', 'mimes:jpeg,png,jpg,gif,svg,webp', 'max:5120'],
-            'brochure' => ['nullable', 'file', 'mimes:pdf', 'max:10240'],
+            'brochure' => ['nullable', 'file', 'mimes:pdf', 'max:20480'],
         ];
     }
 }
