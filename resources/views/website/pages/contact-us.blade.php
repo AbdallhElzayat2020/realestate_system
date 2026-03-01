@@ -79,7 +79,7 @@
                             </div>
                         </div>
 
-              
+
                     </div>
                 </div>
 
@@ -168,7 +168,7 @@
                 </div>
             </div>
 
-            <div class="contact-map-block">
+            {{-- <div class="contact-map-block">
                 <h3 class="contact-map-title mb-3">
                     <i class="fas fa-map-marker-alt me-2"></i>
                     {{ __('contact-us.map_heading') }}
@@ -179,7 +179,7 @@
                         width="100%" height="420" style="border:0;" allowfullscreen="" loading="lazy"
                         referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
-            </div>
+            </div> --}}
         </div>
     </section>
 @endsection

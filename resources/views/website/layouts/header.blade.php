@@ -1,8 +1,8 @@
 <nav id="mainNav" class="navbar navbar-expand-lg bg-body-tertiary fixed-top site-navbar">
     <div class="container px-lg-1">
         <a class="navbar-brand d-flex align-items-center gap-2" href="{{ route('home') }}">
-            <img src="{{asset('assets/website/images/logo_main.png')}}" alt="{{ __('header.company_logo') }}" height="70"
-                class="ms-2" />
+            <img src="{{asset('assets/website/images/log.png')}}" alt="{{ __('header.company_logo') }}" height="100"
+                class="ms-2 site-logo" />
         </a>
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"

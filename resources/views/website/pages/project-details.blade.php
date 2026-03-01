@@ -20,7 +20,7 @@
                 <div class="project-detail-hero-line"></div>
                 <div class="project-detail-hero-meta">
                     @if($project->project_state)
-                        <span class="project-detail-state-badge">{{ \App\Models\Project::PROJECT_STATES[$project->project_state] ?? $project->project_state }}</span>
+                        <span class="project-detail-state-badge">{{ __('projects.state_' . $project->project_state) }}</span>
                     @endif
                     @if($project->service)
                         <a href="{{ route('services.show', $project->service) }}" class="project-detail-category-badge">{{ $project->service->getTranslation('name', app()->getLocale()) }}</a>
